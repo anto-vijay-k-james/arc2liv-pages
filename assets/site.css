@@ -106,14 +106,16 @@ footer { margin-top:32px; color:var(--muted); font-size:.92rem; }
 @media (max-width:650px) { .info-page .home-header { flex-direction:column; gap:20px; } .info-page .home-nav { justify-content:flex-start; } }
 
 /* Home stays a direct link; the adjacent control opens section links. */
-.home-menu-group { display:flex; align-items:center; gap:4px; }
+.home-menu-group { display:flex; align-items:center; gap:0; }
 .home-nav { align-items:center; }
 .home-dropdown { position:relative; }
-.home-dropdown summary { display:flex; align-items:center; justify-content:center; width:36px; height:36px; border:1px solid var(--line); border-radius:8px; color:var(--accent); background:var(--surface); cursor:pointer; list-style:none; }
+.home-dropdown summary { display:flex; align-items:center; justify-content:center; width:36px; height:40px; border:0; border-radius:6px; color:var(--accent); background:transparent; cursor:pointer; list-style:none; }
 .home-dropdown summary::-webkit-details-marker { display:none; }
 .home-dropdown summary:focus-visible { outline:3px solid var(--accent); outline-offset:3px; }
-.home-dropdown summary:hover,.home-dropdown[open] summary { background:#e4f5f6; }
-.home-dropdown[open] summary span { transform:rotate(180deg); }
+.home-dropdown summary span { display:block; width:8px; height:8px; margin-top:-4px; border-right:1.8px solid currentColor; border-bottom:1.8px solid currentColor; font-size:0; transform:rotate(45deg); transition:transform .18s ease; }
+.home-dropdown summary:hover { color:var(--ink); }
+.home-dropdown[open] summary span { margin-top:4px; transform:rotate(225deg); }
+@media (prefers-reduced-motion:reduce) { .home-dropdown summary span { transition:none; } }
 .home-dropdown-links { position:absolute; top:calc(100% + 8px); left:0; z-index:10; min-width:170px; padding:8px; border:1px solid var(--line); border-radius:12px; background:var(--surface); box-shadow:0 12px 30px rgba(22,61,70,.14); }
 .home-dropdown-links a { display:block; padding:10px 12px; border-radius:6px; }
 .home-dropdown-links a:hover { background:var(--page); }
