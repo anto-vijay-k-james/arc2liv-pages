@@ -98,11 +98,9 @@ footer { margin-top:32px; color:var(--muted); font-size:.92rem; }
 .custom-ai-row { margin-top:48px; padding-top:48px; border-top:1px solid var(--line); }
 @media (max-width:650px) { .custom-ai-row { margin-top:32px; padding-top:32px; } }
 
-/* Shared navigation and public information on the application home page. */
+/* Shared header and navigation across all public pages. */
 .info-page main { max-width:1180px; margin-top:32px; }
 .home-nav a { display:inline-block; padding:6px 0; }
 .home-nav a[aria-current="page"] { border-bottom:2px solid var(--accent); }
 .info-page a:focus-visible { outline:3px solid var(--accent); outline-offset:5px; }
-.public-info { scroll-margin-top:28px; }
-.public-info h3 { font-size:1.3rem; line-height:1.2; margin-top:2rem; }
 @media (max-width:650px) { .info-page .home-header { flex-direction:column; gap:20px; } .info-page .home-nav { justify-content:flex-start; } }
